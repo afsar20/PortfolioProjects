@@ -3,15 +3,14 @@ From PortfolioProject..[dbo.NashvilleHousing]
 
 -- Change SaleDate to Date Format
 
-Select SaleDateConverted
-From PortfolioProject..[dbo.NashvilleHousing]
-
 ALTER TABLE [dbo.NashvilleHousing]
 Add SaleDateConverted Date; 
 
 Update [dbo.NashvilleHousing]
 Set SaleDateConverted = CONVERT(Date, SaleDate)
 
+Select SaleDateConverted
+From PortfolioProject..[dbo.NashvilleHousing]
 
 
 --Populate Property Address Data where PropertyAddress is NULL
